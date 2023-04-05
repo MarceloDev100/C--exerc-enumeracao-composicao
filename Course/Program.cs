@@ -17,5 +17,13 @@ Order order = new Order {
 
 Console.WriteLine(order);
 
+// Assuming there is an enumerated type and I want to convert it to string
+// enumerated type -> string
+string txt = OrderStatus.PendingPayment.ToString();
+
+// Printing PendingPayment in string format
+Console.WriteLine(txt);
+
+
 
 
