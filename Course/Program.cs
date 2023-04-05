@@ -24,6 +24,16 @@ string txt = OrderStatus.PendingPayment.ToString();
 // Printing PendingPayment in string format
 Console.WriteLine(txt);
 
+// What if was the opposite? There is a string and I want to convert it to an
+// enumerated type
+// string -> enumerated type
+OrderStatus os = Enum.Parse<OrderStatus>("Delivered");
+Console.WriteLine(os);
 
+// More ways to convert string to an enumerated type
+os = (OrderStatus) Enum.Parse(typeof(OrderStatus), "Shipped");
+Console.WriteLine(os);
 
+Enum.TryParse("Processing", out os);
+Console.WriteLine(os);
 
